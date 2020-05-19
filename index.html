@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculadora de MMC e MDC</title>
+        <link rel="icon" type="image/png" href="icone.png">
+        <link rel="stylesheet" type="text/css" href="CSS/estilos.css">
+        <script language="javascript" src="JS/scripts.js"></script>
+    </head>
+
+    <body class="container">  
+        <h1 id="titulo">Calculadora de MMC e MDC</h1>
+
+        <hr id="linhasuperior" width="92%" size="4px" noshade>
+
+        <form id="entrada" methot="get">
+            <fieldset legend="Números para calcular o MMC e o MDC">         
+                <input type="number" class="numeros" id="num1" min="-9999999" max="9999999" placeholder="Número 1" autocomplete="off">
+                <input type="number" class="numeros" id="num2" min="-9999999" max="9999999" placeholder="Número 2" autocomplete="off">
+                <input type="number" class="numeros" id="num3" min="-9999999" max="9999999" placeholder="Número 3" autocomplete="off">
+                <input type="number" class="numeros" id="num4" min="-9999999" max="9999999" placeholder="Número 4" autocomplete="off">
+            </fieldset>
+        </form>
+
+        <button id="calcular" onclick="mmc_mdc()" unselectable="on">Calcular</button>
+        <button id="limpar" onclick="limpar()" unselectable="on">Limpar</button>
+
+        <a id="mmc" unselectable="on" href="https://pt.wikipedia.org/wiki/M%C3%ADnimo_m%C3%BAltiplo_comum">MMC (Mínino Multiplo Comum)</a>
+        <a id="mdc" unselectable="on" href="https://pt.wikipedia.org/wiki/M%C3%A1ximo_divisor_comum">MDC (Máximo Divisor Comum)</a>
+
+        <hr id="linhainferior" width="92%" size="4px" noshade>
+
+        <div id="saida">
+            <div id="resultadoMMC"><span class="fixo">MMC:&nbsp;</span><span id="resultado1"></span></div>
+            <div id="resultadoMDC"><span class="fixo">MDC:&nbsp;</span><span id="resultado2"></span></div>
+            <p id="erroEntrada"></p>
+            <p id="erroSaida"></p>
+        </div>
+    </body>
+</html>
